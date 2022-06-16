@@ -9,6 +9,8 @@ metadata:
 parameters:
 - name: GIT_REPO
   value: https://github.com/redhat-gpte-devopsautomation/agnosticv-operator.git
+- name: GIT_REF
+  value: main
 - name: NAME
   value: agnosticv-operator
 
@@ -36,7 +38,7 @@ objects:
     source:
       git:
         uri: ${GIT_REPO}
-        ref: main
+        ref: ${GIT_REF}
     strategy:
       type: Docker
       dockerStrategy:
